@@ -24,10 +24,17 @@ namespace IdentityServer.Controllers
             {
                 return View();
             }
+            Request.GetOwinContext().Authentication.SignOut("Application");
             var claims = new List<Claim> {new Claim(ClaimTypes.Name, loginViewModel.UserName)};
             var identity = new ClaimsIdentity(claims, "Application");
-            Request.GetOwinContext().Authentication.SignIn(new AuthenticationProperties {IsPersistent = true}, identity);
+            Request.GetOwinContext().Authentication.SignIn(new AuthenticationProperties {IsPersistent = loginViewModel.RememberMe}, identity);
             return View();
+        }
+
+        public ActionResult Logout()
+        {
+            Request.GetOwinContext().Authentication.SignOut("Application");
+            return new EmptyResult();
         }
     }
 }

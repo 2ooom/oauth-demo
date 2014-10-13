@@ -11,6 +11,7 @@ namespace IdentityServer
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = "Application",
+                CookieSecure = CookieSecureOption.Always,
             });
         }
     }
