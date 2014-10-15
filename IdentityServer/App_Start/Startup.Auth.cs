@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin.Security.Cookies;
+﻿using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
 using Owin;
 
 namespace IdentityServer
@@ -12,6 +13,7 @@ namespace IdentityServer
             {
                 AuthenticationType = "Application",
                 CookieSecure = CookieSecureOption.Always,
+                AuthenticationMode = AuthenticationMode.Active,
             });
         }
     }
