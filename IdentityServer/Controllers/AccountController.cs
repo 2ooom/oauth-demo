@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Web;
-using System.Web.Mvc;
-using IdentityServer.Models;
-using Microsoft.Owin.Security;
+﻿using IdentityServer.Models;
 using System.Web.Http;
 using IdentityServer.Data;
 using System.Threading.Tasks;
@@ -13,6 +6,7 @@ using Microsoft.AspNet.Identity;
 
 namespace IdentityServer.Controllers
 {
+    [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
         private AuthorizationRepository authRepository;
@@ -22,6 +16,7 @@ namespace IdentityServer.Controllers
             authRepository = new AuthorizationRepository();
         }
 
+        [Route("Register")]
         public async Task<IHttpActionResult> Register(LoginViewModel userModel)
         {
             if(!ModelState.IsValid)
@@ -42,13 +37,13 @@ namespace IdentityServer.Controllers
         {
             if(result.Succeeded)
             {
-                return true;
+                return false;
             }
             foreach(var error in result.Errors)
             {
                 ModelState.AddModelError(string.Empty, error);
             }
-            return false;
+            return true;
         }
     }
 }
