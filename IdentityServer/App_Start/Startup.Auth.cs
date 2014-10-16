@@ -9,12 +9,12 @@ namespace IdentityServer
         public void ConfigureAuth(IAppBuilder app)
         {
             // Enable the Application Sign In Cookie.
-            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            /*app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = "Application",
                 CookieSecure = CookieSecureOption.Always,
                 AuthenticationMode = AuthenticationMode.Active,
-            });
+            });*/
         }
     }
 }

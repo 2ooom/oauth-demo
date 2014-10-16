@@ -6,35 +6,49 @@ using System.Web;
 using System.Web.Mvc;
 using IdentityServer.Models;
 using Microsoft.Owin.Security;
+using System.Web.Http;
+using IdentityServer.Data;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace IdentityServer.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : ApiController
     {
-        // GET: Account
-        public ActionResult Login()
+        private AuthorizationRepository authRepository;
+
+        public AccountController()
         {
-            return View();
-        }
-        
-        [HttpPost]
-        public ActionResult Login(LoginViewModel loginViewModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            Request.GetOwinContext().Authentication.SignOut("Application");
-            var claims = new List<Claim> {new Claim(ClaimTypes.Name, loginViewModel.UserName)};
-            var identity = new ClaimsIdentity(claims, "Application");
-            Request.GetOwinContext().Authentication.SignIn(new AuthenticationProperties {IsPersistent = loginViewModel.RememberMe}, identity);
-            return View();
+            authRepository = new AuthorizationRepository();
         }
 
-        public ActionResult Logout()
+        public async Task<IHttpActionResult> Register(LoginViewModel userModel)
         {
-            Request.GetOwinContext().Authentication.SignOut("Application");
-            return new EmptyResult();
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await authRepository.Create(userModel);
+            if(HasErrors(result))
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok();
+        }
+
+        private bool HasErrors(IdentityResult result)
+        {
+            if(result.Succeeded)
+            {
+                return true;
+            }
+            foreach(var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error);
+            }
+            return false;
         }
     }
 }
