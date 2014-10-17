@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Routing;
 using Microsoft.Framework.DependencyInjection;
+using ResourceServer.Business;
 
 namespace ResourceServer
 {
@@ -8,7 +9,12 @@ namespace ResourceServer
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.UseServices(servicies => { servicies.AddMvc(); });
+            app.UseServices(servicies =>
+            {
+                servicies.AddMvc();
+                servicies.AddScoped<IOrderService, OrderService>();
+            });
+            
             // Add MVC to the request pipeline
             app.UseMvc(routes =>
             {

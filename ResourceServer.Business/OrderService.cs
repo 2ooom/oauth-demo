@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ResourceServer.Business.Models;
 
 namespace ResourceServer.Business
@@ -8,7 +7,12 @@ namespace ResourceServer.Business
     {
         public IEnumerable<OrderModel> Get()
         {
-            throw new NotImplementedException();
+            return new List<OrderModel>
+            {
+                new OrderModel { Instrument = "Apple Inc.", Price = 101.91m, Quantity = 30, UserId = "User1" },
+                new OrderModel { Instrument = "Google Inc.", Price = 312.56m, Quantity = 10, UserId = "User2" },
+                new OrderModel { Instrument = "Nike Corp", Price = 72.50m, Quantity = 45, UserId = "User3" },
+            };
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ResourceServer.Controllers
 {
     public class OrderController : Controller
     {
-        private IOrderService orderService;
+        private IOrderService orderService { get; set; }
 
         public OrderController(IOrderService orderService)
         {
@@ -19,12 +19,7 @@ namespace ResourceServer.Controllers
         // GET: /<controller>/
         public IEnumerable<OrderModel> Get()
         {
-            return new List<OrderModel>
-            {
-                new OrderModel { Instrument = "Apple Inc.", Price = 101.91m, Quantity = 30, UserId = "User1" },
-                new OrderModel { Instrument = "Google Inc.", Price = 312.56m, Quantity = 10, UserId = "User2" },
-                new OrderModel { Instrument = "Nike Corp", Price = 72.50m, Quantity = 45, UserId = "User3" },
-            };
+            return orderService.Get();
         }
     }
 }
