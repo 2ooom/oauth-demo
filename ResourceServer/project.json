@@ -4,6 +4,7 @@
     "dependencies": {
         "Microsoft.AspNet.Server.IIS": "1.0.0-alpha4",
         "Microsoft.AspNet.Mvc": "6.0.0-alpha4",
+        "ResourceServer.Business": "",
     },
     "frameworks" : {
         "aspnet50" : { },

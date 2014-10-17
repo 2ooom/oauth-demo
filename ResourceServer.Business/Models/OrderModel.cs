@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ResourceServer.Models
+namespace ResourceServer.Business.Models
 {
     public class OrderModel
     {
