@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{203225
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResourceServer", "ResourceServer\ResourceServer.kproj", "{08C5EA8E-5338-4D36-8C3A-1117304A42F2}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResourceServer.Business", "ResourceServer.Business\ResourceServer.Business.kproj", "{E4A98FCC-71AE-4D3F-9733-C3106E938E35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{08C5EA8E-5338-4D36-8C3A-1117304A42F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08C5EA8E-5338-4D36-8C3A-1117304A42F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C5EA8E-5338-4D36-8C3A-1117304A42F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
