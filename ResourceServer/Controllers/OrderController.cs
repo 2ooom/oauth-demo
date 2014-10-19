@@ -7,6 +7,7 @@ using ResourceServer.Business;
 
 namespace ResourceServer.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private IOrderService orderService { get; set; }
