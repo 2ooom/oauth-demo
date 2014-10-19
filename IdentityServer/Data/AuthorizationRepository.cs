@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Threading.Tasks;
@@ -9,7 +6,7 @@ using IdentityServer.Models;
 
 namespace IdentityServer.Data
 {
-    public class AuthorizationRepository
+    public class AuthorizationRepository : IDisposable
     {
         private UserManager<UserIdentity> manager; 
         private AuthorizationContext context;
@@ -29,6 +26,12 @@ namespace IdentityServer.Data
         public async Task<UserIdentity> Get(string username, string password)
         {
             return await manager.FindAsync(username, password);
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
+            manager.Dispose();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace IdentityServer
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                //AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
+                //AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30), // 24 mins by default
                 Provider = new SimpleAuthorizationProvider()
             };
 
