@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22129.1
+VisualStudioVersion = 14.0.22013.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{DAC4A0DE-7A44-42B5-ACCB-340415DD9742}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResourceServer", "ResourceServer\ResourceServer.kproj", "{08C5EA8E-5338-4D36-8C3A-1117304A42F2}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ResourceServer.Business", "ResourceServer.Business\ResourceServer.Business.kproj", "{E4A98FCC-71AE-4D3F-9733-C3106E938E35}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Identity.Host", "Identity.Host\Identity.Host.kproj", "{E9989BB7-4796-441A-8852-FB3539CA78E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4A98FCC-71AE-4D3F-9733-C3106E938E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9989BB7-4796-441A-8852-FB3539CA78E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9989BB7-4796-441A-8852-FB3539CA78E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9989BB7-4796-441A-8852-FB3539CA78E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9989BB7-4796-441A-8852-FB3539CA78E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
