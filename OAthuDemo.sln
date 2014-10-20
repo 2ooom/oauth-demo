@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22129.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F2FDAA2-EFC8-47B6-BBAD-93D287C559C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{730EEDD3-616C-4C50-9747-62EA5CAF8732}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OAuthDemo.Identity", "src\OAuthDemo.Identity\OAuthDemo.Identity.kproj", "{3E9AFE10-B249-464B-AA8C-EBBF0141382D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OAuthDemo.Business", "src\OAuthDemo.Business\OAuthDemo.Business.kproj", "{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OAuthDemo.Business.Host", "src\OAuthDemo.Business.Host\OAuthDemo.Business.Host.kproj", "{F3D94964-0964-44BA-A8D5-483D0E66ED47}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OAuthDemo.Web", "src\OAuthDemo.Web\OAuthDemo.Web.kproj", "{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E9AFE10-B249-464B-AA8C-EBBF0141382D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9AFE10-B249-464B-AA8C-EBBF0141382D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9AFE10-B249-464B-AA8C-EBBF0141382D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9AFE10-B249-464B-AA8C-EBBF0141382D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D94964-0964-44BA-A8D5-483D0E66ED47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D94964-0964-44BA-A8D5-483D0E66ED47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D94964-0964-44BA-A8D5-483D0E66ED47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D94964-0964-44BA-A8D5-483D0E66ED47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E9AFE10-B249-464B-AA8C-EBBF0141382D} = {6F2FDAA2-EFC8-47B6-BBAD-93D287C559C1}
+		{C42E20AE-49E3-4B26-B4FF-BC8C8AD3AF46} = {6F2FDAA2-EFC8-47B6-BBAD-93D287C559C1}
+		{F3D94964-0964-44BA-A8D5-483D0E66ED47} = {6F2FDAA2-EFC8-47B6-BBAD-93D287C559C1}
+		{BB339FD6-62CD-4D42-B8EB-5A17D74DD3AE} = {6F2FDAA2-EFC8-47B6-BBAD-93D287C559C1}
+	EndGlobalSection
+EndGlobal
