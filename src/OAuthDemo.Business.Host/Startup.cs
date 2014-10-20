@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
+using Microsoft.Framework.DependencyInjection;
+using Microsoft.AspNet.Routing;
 
 namespace OAuthDemo.Business.Host
 {
@@ -7,7 +8,17 @@ namespace OAuthDemo.Business.Host
     {
         public void Configure(IApplicationBuilder app)
         {
-            // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
+            app.UseServices(t =>
+            {
+                t.AddMvc();
+                t.AddScoped<IOrderService, OrderService>();
+            });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "api",
+                    template: "{controller}/{id?}");
+            });
         }
     }
 }
