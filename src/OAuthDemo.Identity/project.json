@@ -3,6 +3,9 @@
     "exclude": "wwwroot/**/*.*",
     "dependencies": {
         "Microsoft.AspNet.Server.IIS": "1.0.0-alpha4",
+        "Microsoft.AspNet.Identity": "3.0.0-alpha4",
+        "Microsoft.AspNet.Identity.SqlServer": "3.0.0-alpha4",
+        "EntityFramework.SqlServer": "7.0.0-alpha4"
     },
     "frameworks" : {
         "aspnet50" : { },

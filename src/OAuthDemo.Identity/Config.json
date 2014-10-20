@@ -1,0 +1,7 @@
+﻿{
+    "Data": {
+        "DefaultConnection": { 
+            "ConnectionString": "Server=CC-DMITRY\SQLSERVEREXPRESS;Database=CCIdentity;Trusted_Connection=True;"
+        }
+    }
+}
