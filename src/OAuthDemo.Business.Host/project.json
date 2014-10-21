@@ -1,0 +1,15 @@
+﻿{
+    "webroot" : "wwwroot",
+    "exclude": "wwwroot/**/*.*",
+    "dependencies": {
+        "Microsoft.AspNet.Server.IIS": "1.0.0-*",
+        "Microsoft.AspNet.Mvc": "6.0.0-*",
+        "Microsoft.AspNet.Owin": "1.0.0-*",
+        "OAuthDemo.Business": "",
+
+    },
+    "frameworks" : {
+        "aspnet50" : { },
+        "aspnetcore50" : { }
+    }
+}
