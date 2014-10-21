@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Routing;
 using Microsoft.Data.Entity;
 using Microsoft.Framework.ConfigurationModel;
 using Microsoft.Framework.DependencyInjection;
+using Microsoft.AspNet.Security.OAuth;
 
 namespace OAuthDemo.Identity
 {
@@ -32,6 +34,19 @@ namespace OAuthDemo.Identity
 
                 // Add MVC services to the services container
                 services.AddMvc();
+
+                // Add MVC to the request pipeline
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller}/{action}/{id?}",
+                        defaults: new { controller = "Home", action = "Index" });
+
+                    routes.MapRoute(
+                        name: "api",
+                        template: "{controller}/{id?}");
+                });
             });
         }
     }

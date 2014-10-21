@@ -10,6 +10,7 @@
         "EntityFramework.SqlServer": "7.0.0-alpha4",
         "Microsoft.AspNet.RequestContainer": "1.0.0-alpha4",
         "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-alpha4",
+        "Microsoft.AspNet.Security.OAuth": "1.0.0-alpha4",
     },
     "frameworks" : {
         "aspnet50" : { },
