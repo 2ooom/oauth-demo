@@ -5,7 +5,11 @@
         "Microsoft.AspNet.Server.IIS": "1.0.0-alpha4",
         "Microsoft.AspNet.Identity": "3.0.0-alpha4",
         "Microsoft.AspNet.Identity.SqlServer": "3.0.0-alpha4",
-        "EntityFramework.SqlServer": "7.0.0-alpha4"
+        "Microsoft.AspNet.Identity.Authentication": "3.0.0-alpha4",
+        "Microsoft.AspNet.Mvc": "6.0.0-alpha4",
+        "EntityFramework.SqlServer": "7.0.0-alpha4",
+        "Microsoft.AspNet.RequestContainer": "1.0.0-alpha4",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-alpha4",
     },
     "frameworks" : {
         "aspnet50" : { },

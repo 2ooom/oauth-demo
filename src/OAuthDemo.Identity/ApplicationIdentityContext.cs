@@ -5,11 +5,11 @@ using System;
 
 namespace OAuthDemo.Identity
 {
-    public class IdentityContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationIdentityContext : IdentityDbContext<ApplicationUser>
     {
         private static bool _created = false;
 
-        public IdentityContext(IServiceProvider serviceProvider, IOptionsAccessor<DbContextOptions> optionsAccessor)
+        public ApplicationIdentityContext(IServiceProvider serviceProvider, IOptionsAccessor<DbContextOptions> optionsAccessor)
             : base(serviceProvider, optionsAccessor.Options)
         {
             // Create the database and schema if it doesn't exist
